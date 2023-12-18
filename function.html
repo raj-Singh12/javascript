@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Function</h2>
+    
+    <script>
+        function sayName(name){
+            console.log(name)
+        }
+        sayName("Raaaz")
+
+
+        function greatName (name) {
+            // greet = 'Hi ' + name + ', Nice to meet you!'
+            greet = `Hi ${name}, Nice to meet you2`
+            document.write(greet)
+        }
+        greatName('Raaz');
+
+        function calculateFoodTotal (food, tip) {
+            tipPercentage = tip / 100
+            tipAmount = food * tipPercentage
+            total = food + tipAmount
+            return total
+        }
+        document.write(calculateFoodTotal(100, 20))
+
+        // arrow function with explicit return
+        const sumArrow = (a, b) => {
+            return a + b
+        }
+
+        // arrow function with implicit return
+        // Note : For implicit return, remove curly braces
+        const sumArrow2 = (a, b) => a + b
+        document.write(sumArrow2(10,50));
+
+        let grocies = [0,1,2,3,4,5]
+        console.log(grocies.length)
+    </script>
+
+</body>
+
+</html>

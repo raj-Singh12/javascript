@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shallow Copy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1>Shallow Copy</h1>
+
+    <script>
+      let afreen = {
+        name : 'afreen bano'
+      }
+      
+      let harsha = afreen;
+      harsha.name = 'harsha devi'
+      console.log(afreen)
+
+
+      let afreen2 = {
+        name : 'afreen2 bano'
+      }
+
+      let harsha2 = Object.assign({}, afreen2);
+      harsha2.name = 'harsha2 devi'
+      console.log(afreen2)
+
+
+      let afreen3 = {
+        name : 'afreen3 bano'
+      }
+
+      let harsha3 = {...afreen3};
+      harsha3.name = 'harsha3 devi'
+      console.log(afreen3)
+
+     // Deep Copy
+      
+      let afreen4 = {
+        name : 'afreen4 bano',
+        address: {
+            city: 'Pune',
+            state: 'Maharastra'
+        }
+      }
+
+      let harsha4 = {...afreen4};
+      harsha4.address.city = 'Mumbai'
+      console.log(harsha4)
+
+    </script>
+</body>
+
+</html>

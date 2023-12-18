@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Loop</h2>
+    
+    <script>
+       const fruits = ['Mango', 'Banana', 'Apple'];
+       for (let i=0; i<fruits.length; i++){
+             document.write(fruits[i])
+       }
+
+       for (const fruit of fruits){
+          document.write(fruit)
+       }
+
+      //  const numbers = [1,2,3,4,5,6];
+      //  let result = []
+      //  for(let number of numbers){
+      //   result.push(number*2)
+      //  }
+      //  document.write(result)
+
+
+       const double = (numbers) => {
+            let result = []
+            for (const number of numbers) {
+               result.push(number *2)
+            }
+            return result
+       }
+       console.log(double([1,2,3,4,5,6]))
+
+       // for the netflix card movie
+
+       for(let movie of movies){
+         return card(movie)
+       }
+    </script>
+
+</body>
+
+</html>

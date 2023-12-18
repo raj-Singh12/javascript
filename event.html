@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Event</h2>
+    <input type="button" value="Click Me" id="button" onclick="handleEvent()" />
+    <div id="parent_div">
+        <p id="childPara">All the power</p>
+        <p id="childPara2">All the power2</p>
+    </div>
+    <input type="button" value="remove" onclick="handleRemove()" />
+    <input type="button" value="create" onclick="handleCreate()" />
+    <script>
+
+        function handleCreate() {
+            var parent = document.getElementById("parent_div");
+            var child = document.createElement("p");
+            var text = document.createTextNode("Hello programer , this one is the new line that you created for your new functionality , please give your 100% for your practive sesssions");
+            child.appendChild(text)
+            parent.appendChild(child);
+        }
+
+        function handleRemove() {
+            var parent = document.getElementById("parent_div");
+            var child = document.getElementById("childPara");
+            parent.removeChild(child);
+        }
+
+        function handleEvent() {
+            document.getElementById("button").addEventListener("Click", handleButtonClick);
+            function handleButtonClick() {
+                alert("Click Event");
+            }
+        }
+        window.addEventListener("load", handleEvent);
+    </script>
+
+</body>
+
+</html>

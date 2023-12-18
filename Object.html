@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Object</h2>
+    
+    <script>
+       const person = {
+         name: 'Leonardo',
+         shirt: 'white'
+       }
+       document.write(person.name);
+
+       const introducer = (name, shirt) => {
+        const person = {
+            name: name,
+            shirt: shirt,
+            asssts: 100000,
+            liabilities: 50000,
+            netWorth: function () {
+                return this.asssts - this.liabilities
+            }
+        }
+        const intro = `Hi, my name is ${person.name} and the color of the shirt is ${person.shirt} and
+        my net worth is $${person.netWorth()} USD`
+        return intro
+       }
+       document.write(introducer('Raj', 'black'))
+
+
+       // A Method is a property containing a function defition
+    </script>
+
+</body>
+
+</html>
